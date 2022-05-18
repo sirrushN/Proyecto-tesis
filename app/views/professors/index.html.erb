@@ -1,0 +1,32 @@
+<div style="width:80%; margin:10px auto; position: relative;">
+
+  <h1>Profesores</h1>
+
+  <table class="table-index">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Dirección</th>
+        <th>Teléfono</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @professors.each do |professor| %>
+        <tr>
+          <td><%= professor.name %></td>
+          <td><%= professor.address %></td>
+          <td><%= professor.phone %></td>
+          <td><%= link_to 'Mostrar', professor %></td>
+          <td><%= link_to 'Editar', edit_professor_path(professor) %></td>
+          <td><%= link_to 'Eliminar', professor, method: :delete, data: { confirm: 'Está seguro?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'Nuevo registro de profesor', new_professor_path, class:"btn-new" %>
+</div>

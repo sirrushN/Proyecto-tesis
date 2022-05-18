@@ -1,0 +1,32 @@
+<div style="width:80%; margin:10px auto; position: relative;">
+
+  <h1>Estudiantes</h1>
+  
+  <table class="table-index">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Dirección</th>
+        <th>Teléfono</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <% @students.each do |student| %>
+        <tr>
+          <td><%= student.name %></td>
+          <td><%= student.address %></td>
+          <td><%= student.phone %></td>
+          <td><%= link_to 'Mostar', student %></td>
+          <td><%= link_to 'Editar', edit_student_path(student) %></td>
+          <td><%= link_to 'Eliminar', student, method: :delete, data: { confirm: 'Esta seguro?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  
+  <br>
+  
+  <%= link_to 'Nuevo registro de estudiante', new_student_path, class:"btn-new" %>
+</div>

@@ -1,0 +1,137 @@
+html,body{
+  margin: 0px;
+}
+a,a:visited{
+  color: inherit;
+  text-decoration: none;
+}
+a:hover{
+  background-color: transparent;
+}
+.btn-save,
+.be-green{
+  background-color: #128c7e;
+}
+.btn-new,
+.btn-edit,
+.registration,
+.be-green-light{
+  background-color: #8bcec6;
+}
+.btn-back,
+.be-blue{
+  background-color: #9fc6f3;
+}
+.btn-save,
+.white{
+  color: white;
+}
+.btn-show{
+  background-color: #ccb39b;
+}
+.tittle,
+.brown{
+  color: #472f19;
+}
+.topic-padding{
+  padding: 10px 10px 0px 0px;
+}
+.white ul li {
+  font-size: 20px;
+}
+//-webkit-text-stroke: 1px rgb(102, 252, 82);
+.welcome{
+  background-color: #472f19;
+  font-size: 30px;
+  text-align: center;
+  min-height: 1000px;
+  border: 1px solid #333333;
+}
+.form-reg,
+.form-area,
+.registration{
+  border: none;
+  border-bottom: 1px solid;
+  outline: none;
+  width: 100%;
+  display: block;
+  padding: 10px 0px;
+  font-size: 1.2em;
+}
+.registration{
+  height: 15px;
+}
+.form-area{
+  height: 250px;
+}
+.field{
+  margin-top:1em;
+}
+.tittle{
+  font-size: 30px;
+}
+.btn-new,
+.btn-edit,
+.btn-show,
+.btn-back{
+  color: rgb(0, 0, 0) !important;
+  border: 1px solid;
+  border-radius: 2px;
+  padding: 4px 8px;
+}
+.btn-save{
+  padding: 5px 10px;
+}
+.back-div{
+  position: absolute;
+  right: 5px;
+}
+.table-index{
+  border-collapse: collapse;
+  border-radius: 5px;
+  overflow: hidden;
+  width:100%;
+}
+.table-index th, td{
+  padding: 8px;
+  border-bottom: 2px solid white; 
+}
+.table-index th{
+  background: #9fc6f3;
+}
+.table-index td{
+  background: rgb(233, 232, 232);
+}
+.margen{
+  margin-top: 20px;
+}
+.box{
+  text-align: justify;
+}
+
+@media only screen and (max-width: 48em) {
+  .li {
+    list-style:none;
+    width: 100%;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  .ri {
+    list-style:none;
+    height: 30px;
+    width: 150px;
+    margin: 0, 20, 0, 0;
+    padding: 0;
+    float: right;
+  }
+  .session {
+    justify-content: right;
+    background-color: #472f19;
+  }
+}

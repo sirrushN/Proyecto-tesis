@@ -1,0 +1,20 @@
+<div style="width:80%; margin:10px auto; position: relative;">
+
+  <table class="table-index">
+    <tr>
+      <th>Nombre:</th>
+      <td><%= @subject.name %></td>
+    </tr>
+    <tr>
+      <th>Descripción:</th>
+      <td><%= @subject.description %></td>
+    </tr>
+  </table>
+
+  <br>
+
+  <div class="back-div">
+    <%= link_to 'Editar', edit_subject_path(@subject), class:"btn-edit" %> |
+    <%= link_to 'Mostrar todos las materias', subjects_path, class:"btn-show" %>
+  </div>
+</div>

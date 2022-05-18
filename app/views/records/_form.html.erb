@@ -1,0 +1,43 @@
+<%= form_with(model: record) do |form| %>
+  <% if record.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(record.errors.count, "error/es") %> de validacion sin resolver:</h2>
+      <ul>
+        <% record.errors.each do |error| %>
+          <li><%= error.message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Curso %>
+    <select name="record[course_id]">
+    <option value = nil>Seleccione un curso</option>
+      <% Course.all.each do |curso| %>
+        <option <%= curso.id == record.course_id ? "selected" : "" %> value="<%= curso.id %>">
+          <%=curso.period%>, <%= curso.subject.name %> Por <%= curso.professor.name %>
+        </option>
+      <% end %>
+    </select>
+  </div>
+
+  <div class="field">
+    <%= form.label :Estudiante %>
+    <select name="record[student_id]">
+    <option value = nil>Seleccione un Estudiante</option>
+      <% Student.all.each do |estudiante| %>
+        <option <%= estudiante.id == record.student_id ? "selected" : "" %> value="<%= estudiante.id %>"><%= estudiante.name %></option>
+      <% end %>
+    </select>
+  </div>
+
+  <div class="field">
+    <%= form.label :Nota, class:"form-reg" %>
+    <%= form.number_field :score, class:"form-reg" %>
+  </div>
+
+  <div class="actions">
+    <input type="submit" name="commit" value="Guardar" data-disable-with="Guardar">
+  </div>
+<% end %>

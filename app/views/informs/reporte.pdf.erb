@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<%= wicked_pdf_stylesheet_link_tag 'pdf' %>
+<div style="width:90%; margin:10px auto; position: relative;">
+  <meta charset="utf-8">
+  <div class="tittle"><h1>Reporte del informe de Notas</h1></div>
+
+  <table class="table-index">
+    <thead>
+      <tr>
+        <th>Curso</th>
+        <th>Estudiante</th>
+        <th>Nota</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @informs_record.each do |record| %>
+        <tr>
+          <td><%= record.course.period %>, <%= record.course.subject.name %> Por <%= record.course.professor.name %></td>
+          <td><%= record.student.name %></td>
+          <td><%= record.score %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

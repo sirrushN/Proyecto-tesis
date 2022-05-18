@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registro</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <%= render "partials/navigation" %>
+  <div style="width:80%; margin:10px auto; position: relative;">
+    <p id="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+  </div>
+
+    <%= yield %>
+  </body>
+</html>

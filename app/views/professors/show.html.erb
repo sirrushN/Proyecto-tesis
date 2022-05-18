@@ -1,0 +1,24 @@
+<div style="width:80%; margin:10px auto; position: relative;">
+
+  <table class="table-index">
+    <tr>
+      <th>Nombre:</th>
+      <td><%= @professor.name %></td>
+    </tr>
+    <tr>
+      <th>Dirección:</th>
+      <td><%= @professor.address %></td>
+    </tr>
+    <tr>
+      <th>Teléfono:</th>
+      <td><%= @professor.phone %></td>
+    </tr>
+  </table>
+
+  <br>
+
+  <div class="back-div">
+    <%= link_to 'Editar', edit_professor_path(@professor), class:"btn-edit"%> |
+    <%= link_to 'Mostrar todos los profesores', professors_path, class:"btn-show" %>
+  </div>
+</div>

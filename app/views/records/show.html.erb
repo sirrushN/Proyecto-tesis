@@ -1,0 +1,24 @@
+<div style="width:80%; margin:10px auto; position: relative;">
+
+  <table class="table-index">
+    <tr>
+      <th>Curso:</th>
+      <td><%= @record.course.period %>, <%= @record.course.subject.name %> Por <%= @record.course.professor.name %></td>
+    </tr>
+    <tr>
+      <th>Estudiante:</th>
+      <td><%= @record.student.name %></td>
+    </tr>
+    <tr>
+      <th>Nota:</th>
+      <td><%= @record.score %></td>
+    </tr>
+  </table>
+
+  <br>
+
+  <div class="back-div">
+    <%= link_to 'Editar', edit_record_path(@record), class:"btn-edit" %> |
+    <%= link_to 'Mostar todos los registros de nota', records_path, class:"btn-show" %>
+  </div>
+</div>

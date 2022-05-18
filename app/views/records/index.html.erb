@@ -1,0 +1,32 @@
+<div style="width:80%; margin:10px auto; position: relative;">
+
+  <h1>Notas</h1>
+
+  <table class="table-index">
+    <thead>
+      <tr>
+        <th>Curso</th>
+        <th>Estudiante</th>
+        <th>Nota</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @records.each do |record| %>
+        <tr>
+          <td><%= record.course.period %>, <%= record.course.subject.name %> Por <%= record.course.professor.name %></td>
+          <td><%= record.student.name %></td>
+          <td><%= record.score %></td>
+          <td><%= link_to 'Mostrar', record %></td>
+          <td><%= link_to 'Editar', edit_record_path(record) %></td>
+          <td><%= link_to 'Eliminar', record, method: :delete, data: { confirm: 'Esta seguro?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'Nuevo Registro de nota', new_record_path, class:"btn-new" %>
+</div>

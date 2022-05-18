@@ -1,0 +1,8 @@
+<div style="width:80%; margin:10px auto; position: relative;">
+  <h1>Editar registro de nota</h1>
+  <%= render 'form', record: @record %>
+  <div class="back-div">
+    <%= link_to 'Mostrar', @record, class:"btn-show" %> |
+    <%= link_to 'Atras', records_path, class:"btn-back" %>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<div style="width:80%; margin:10px auto; position: relative;">
+  <h1>Editar registro de estudiante</h1>
+  <%= render 'form', student: @student %>
+  <div class="back-div">
+    <%= link_to 'Mostrar', @student %> |
+    <%= link_to 'Atrás', students_path %>
+  </div>
+</div>

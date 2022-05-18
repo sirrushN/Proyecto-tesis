@@ -1,0 +1,22 @@
+.table-index{
+  border-collapse: collapse;
+  border-radius: 5px;
+  overflow: hidden;
+  width:100%;
+}
+.table-index th, td{
+  padding: 8px;
+  border-bottom: 2px solid white;
+  font-size: 20px;
+}
+.table-index th{
+  background: #9fc6f3;
+}
+.table-index td{
+  background: rgb(233, 232, 232);
+}
+.tittle h1{
+  color: #472f19;
+  font-size: 40px;
+  text-align: center;
+}

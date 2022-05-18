@@ -1,0 +1,21 @@
+<header>
+  <nav class="be-green white topic-padding">
+    <ul class="row center-xs">
+      <li class="col-sm li"> <%= link_to "Inicio", root_path %> </li>
+      <li class="col-sm li"> <%= link_to "Profesores", professors_path %> </li>
+      <li class="col-sm li"> <%= link_to "Estudiantes", students_path %> </li>
+      <li class="col-sm li"> <%= link_to "Materias", subjects_path %> </li>
+      <li class="col-sm li"> <%= link_to "Cursos", courses_path %> </li>
+      <li class="col-sm li"> <%= link_to "Notas", records_path %> </li>
+      <li class="col-sm li"> <%= link_to "Informe de Notas", "/form" %> </li>
+    </ul>
+    <ul class="row session">
+      <% if user_signed_in? %>
+        <li class="li ri"><%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete %></li>
+      <% else %>
+        <li class="li ri"><%= link_to "Iniciar sesión", new_user_session_path %></li>
+        <li class="li ri"><%= link_to "Crear cuenta", new_user_registration_path %></li>
+      <% end %>
+    </ul>
+  </nav>
+</header>

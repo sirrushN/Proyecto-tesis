@@ -1,0 +1,8 @@
+<div style="width:80%; margin:10px auto; position: relative;">
+  <h1>Editar Curso</h1>
+  <%= render 'form', course: @course %>
+  <div class="back-div">
+    <%= link_to 'Mostrar', @course, class:"btn-show" %> |
+    <%= link_to 'Atrás', courses_path, class:"btn-back" %>
+  </div>
+</div>

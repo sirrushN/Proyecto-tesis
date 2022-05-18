@@ -1,0 +1,23 @@
+<div style="width:80%; margin:10px auto; position: relative;">
+  <table class="table-index">
+    <tr>
+      <th>Profesor:</th>
+      <td><%= @course.professor.name %></td>
+    </tr>
+    <tr>
+      <th>Materia:</th>
+      <td><%= @course.subject.name %></td>
+    </tr>
+    <tr>
+      <th>Periodo:</th>
+      <td><%= @course.period %></td>
+    </tr>
+  </table>
+
+  <br>
+
+  <div class="back-div">
+    <%= link_to 'Editar', edit_course_path(@course), class:"btn-edit" %> |
+    <%= link_to 'Todos los cursos', courses_path, class:"btn-show" %>
+  </div>
+</div>

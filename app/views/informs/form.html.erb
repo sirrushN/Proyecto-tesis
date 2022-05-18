@@ -1,0 +1,28 @@
+<div style="width:80%; margin:10px auto; position: relative;">
+
+  <h1>Filtro de informe de notas</h1>
+
+  <form class="record_search" id="record_search" action="informs" "/informs.pdf" accept-charset="UTF-8" method="get">
+
+    <select name="q[course_id_eq]" id="q_course_id_eq">
+    <option value = "">Seleccione un curso</option>
+      <% Course.all.each do |curso| %>
+        <option value="<%= curso.id %>"><%= curso.subject.name %> Por <%= curso.professor.name %></option>
+      <% end %>
+    </select>
+
+    <br><br>
+
+    <select name="q[student_id_eq]" id="q_student_id_eq">
+    <option value = "">Seleccione un Estudiante</option>
+      <% Student.all.each do |estudiante| %>
+        <option value="<%= estudiante.id %>"><%= estudiante.name %></option>
+      <% end %>
+    </select>
+
+    <br><br>
+
+    <input type="submit" name="commit" value="Buscar" data-disable-with="Buscar">
+  </form>
+
+</div>
