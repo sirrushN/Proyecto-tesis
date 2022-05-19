@@ -7,7 +7,7 @@
     <select name="q[course_id_eq]" id="q_course_id_eq">
     <option value = "">Seleccione un curso</option>
       <% Course.all.each do |curso| %>
-        <option value="<%= curso.id %>"><%= curso.subject.name %> Por <%= curso.professor.name %></option>
+        <option value="<%= curso.id %>"><%= curso.period %>, <%= curso.subject.name %> impartida por <%= curso.professor.name %></option>
       <% end %>
     </select>
 

@@ -16,7 +16,7 @@
     <tbody>
       <% @informs_record.each do |record| %>
         <tr>
-          <td><%= record.course.period %>, <%= record.course.subject.name %> Por <%= record.course.professor.name %></td>
+          <td><%= record.course.period %>, <%= record.course.subject.name %> impartida por <%= record.course.professor.name %></td>
           <td><%= record.student.name %></td>
           <td><%= record.score %></td>
         </tr>
