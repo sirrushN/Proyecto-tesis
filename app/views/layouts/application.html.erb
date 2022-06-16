@@ -11,10 +11,13 @@
   </head>
 
   <body>
-  <%= render "partials/navigation" %>
-  <div style="width:80%; margin:10px auto; position: relative;">
-    <p id="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+  <% if user_signed_in? %>
+    <%= render "partials/navigation" %>
+  <% end %>
+  <%= render "partials/nav_log" %>
+  <div style="width:80%; margin:1px auto; position: relative;">
+    <p style="margin:1px; padding:1px;" id="notice"><%= notice %></p>
+    <p style="margin:1px; padding:1px;" class="alert"><%= alert %></p>
   </div>
 
     <%= yield %>
