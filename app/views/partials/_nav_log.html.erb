@@ -1,10 +1,10 @@
 <nav class="be-green white topic-padding">
   <ul class="row session">
     <% if user_signed_in? %>
+      <li class="li ri"><%= link_to "Editar cuenta", edit_user_registration_path %></li>
       <li class="li ri"><%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete %></li>
     <% else %>
       <li class="li ri"><%= link_to "Iniciar sesión", new_user_session_path %></li>
-      <li class="li ri"><%= link_to "Crear cuenta", new_user_registration_path %></li>
     <% end %>
   </ul>
 </nav>
